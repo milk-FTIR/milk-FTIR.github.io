@@ -1,39 +1,69 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的网站</title>
+    <title>Milk FTIR Disease Prediction</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 40px;
-            background-color: #f4f4f9;
+            margin: 0;
+            padding: 40px;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
         }
-        header, footer {
-            background: #007BFF;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-        }
-        main {
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
-            text-align: center;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
         }
         h1 {
             color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+        .gif-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 30px auto;
+            text-align: center;
+        }
+        .gif-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .overview {
+            margin: 30px auto;
+            max-width: 900px;
+            text-align: justify;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        .highlight {
+            color: #2196F3;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>欢迎来到我的网站</h1>
-    </header>
-    <main>
-        <p>这里是内容部分，可以添加文字、图片、链接等。</p>
-    </main>
-    <footer>
-        <p>版权所有 © 2024</p>
-    </footer>
+    <div class="container">
+        <h1>Predicting Early-lactation Diseases in Cows with Milk FTIR</h1>
+        
+        <div class="gif-container">
+            <img src="fig/milk_spectra_mp4.gif" alt="Milk FTIR Spectra Analysis">
+        </div>
+        
+        <div class="overview">
+            <p>This study aims to predict subsequent postpartum diseases at dairy cows using FTIR spectra collected from daily milking procedures, with a long goal of supporting large-scale health monitoring program in modern dairy farms. Specifically, we devise '<span class="highlight">combined framework</span>', a mechanism that enables high-speed batch pre-processing spectra and tailor ensemble machine learning algorithms for diseases prediction. Using this framework, we successfully predict the overall health condition, metritis and clinical mastitis on one commercial dairy farm in upstate NY.</p>
+        </div>
+    </div>
 </body>
 </html>
+
