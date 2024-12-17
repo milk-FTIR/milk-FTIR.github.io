@@ -106,6 +106,76 @@
             color: #505050;
             font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
         }
+
+        .publications {
+            margin: 60px auto;
+            max-width: 1200px;
+        }
+
+        .publications h2 {
+            color: #00BFA5;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            font-weight: 300;
+            font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+        }
+
+        .publication-item {
+            background-color: #fff;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .publication-item .authors {
+            color: #666;
+            margin-bottom: 10px;
+            font-size: 1em;
+        }
+
+        .publication-item .title {
+            color: #333;
+            font-size: 1.3em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .publication-item .links {
+            display: flex;
+            gap: 10px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.9em;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .button.doi {
+            background-color: #00BFA5;
+            color: white;
+        }
+
+        .button.pdf {
+            background-color: #FF5252;
+            color: white;
+        }
+
+        .button.code {
+            background-color: #40C4FF;
+            color: white;
+        }
+
+        .button:hover {
+            opacity: 0.8;
+            transform: translateY(-1px);
+        }
     </style>
 </head>
 <body>
@@ -147,8 +217,8 @@
                 </div>
             </div>
         </div>
-    </div>
-            <div class="publications">
+
+        <div class="publications">
             <h2>Publications</h2>
 
             <div class="publication-item">
@@ -172,8 +242,8 @@
             </div>
         </div>
     </div>
-    
 </body>
 </html>
+
 
 
