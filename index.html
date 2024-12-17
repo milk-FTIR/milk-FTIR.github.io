@@ -176,6 +176,79 @@
             opacity: 0.8;
             transform: translateY(-1px);
         }
+
+        .what-we-help {
+            margin: 60px auto;
+            max-width: 1200px;
+        }
+
+        .what-we-help h2 {
+            color: #00BFA5;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            font-weight: 300;
+            font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+        }
+
+        .help-container {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .help-item {
+            flex: 1;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .help-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .help-image {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .help-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .help-content {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .help-content h3 {
+            color: #333;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .tutorial-button {
+            display: inline-block;
+            padding: 10px 30px;
+            background-color: #00BFA5;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .tutorial-button:hover {
+            background-color: #00A895;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,191,165,0.3);
+        }
     </style>
 </head>
 <body>
@@ -238,6 +311,34 @@
                     <a href="#" class="button doi">DOI</a>
                     <a href="#" class="button pdf">PDF</a>
                     <a href="https://github.com/lindan1128/Milk-FTIR-Spectra-Metritis-Mastitis-Project" class="button code">CODE</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="what-we-help">
+            <h2>What We Can Help</h2>
+            
+            <div class="help-container">
+                <!-- Pre-Processing Section -->
+                <div class="help-item">
+                    <div class="help-image">
+                        <img src="fig/3.png" alt="Pre-Processing Visualization">
+                    </div>
+                    <div class="help-content">
+                        <h3>Pre-Processing</h3>
+                        <a href="tutorial/batch_preprocessing.html" class="tutorial-button">Tutorial</a>
+                    </div>
+                </div>
+
+                <!-- Machine Learning Section -->
+                <div class="help-item">
+                    <div class="help-image">
+                        <img src="fig/4.png" alt="Machine Learning Visualization">
+                    </div>
+                    <div class="help-content">
+                        <h3>Machine Learning</h3>
+                        <a href="tutorial/ensemble_ml.html" class="tutorial-button">Tutorial</a>
+                    </div>
                 </div>
             </div>
         </div>
