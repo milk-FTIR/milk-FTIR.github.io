@@ -51,6 +51,61 @@
             color: #2196F3;
             font-weight: bold;
         }
+        .why-research {
+            margin: 60px auto;
+            max-width: 1200px;
+        }
+
+        .why-research h2 {
+            color: #00BFA5;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            font-weight: 300;
+            font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+        }
+
+        .research-item {
+            margin-bottom: 40px;
+        }
+
+        .research-content {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .image-side {
+            flex: 0 0 400px;
+        }
+
+        .image-side img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .text-side {
+            flex: 1;
+        }
+
+        .highlight-text {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        .text-side p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+            color: #505050;
+            font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+        }
     </style>
 </head>
 <body>
@@ -64,7 +119,36 @@
         <div class="overview">
             <p>This study aims to predict subsequent postpartum diseases at dairy cows using FTIR spectra collected from daily milking procedures, with a long goal of supporting large-scale health monitoring program in modern dairy farms. Specifically, we devise '<span class="highlight">combined framework</span>', a mechanism that enables high-speed batch pre-processing spectra and tailor ensemble machine learning algorithms for diseases prediction. Using this framework, we successfully predict the overall health condition, metritis and clinical mastitis on one commercial dairy farm in upstate NY.</p>
         </div>
+
+        <div class="why-research">
+            <h2>Why We Do This Research</h2>
+            
+            <div class="research-item">
+                <div class="research-content">
+                    <div class="image-side">
+                        <img src="fig/1.png" alt="Milk FTIR Analysis">
+                    </div>
+                    <div class="text-side">
+                        <p class="highlight-text">Milk FTIR could be a non-invasive, direct and cheap health indicator.</p>
+                        <p>Considering that the alterations in milk composition throughout lactation mirror the physiological state of dairy cows, as well as the advantages of large-scale milk analysis without additional farm management changes, milk FTIR spectroscopy shows potential to assist health monitoring and disease warning in practice.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="research-item">
+                <div class="research-content">
+                    <div class="image-side">
+                        <img src="fig/2.png" alt="Machine Learning Analysis">
+                    </div>
+                    <div class="text-side">
+                        <p class="highlight-text">Daily FTIR + Machine Learning = Real-time and Precise Health Condition Prediction!</p>
+                        <p>Our projects combine daily milk FTIR spectra for each dairy cow with ensembles machine learning models to support a real-time and precise prediction. Under this overarching goal, we are conducting a series of research that further validates the feasibility of spectra and technology, generates benchmark dataset, and proposes computing systems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
+
 
