@@ -176,6 +176,77 @@
             opacity: 0.8;
             transform: translateY(-1px);
         }
+    .publication-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.text-content {
+    flex: 1;
+    text-align: left;
+    max-width: 50%; /* 限制文字部分的宽度 */
+}
+
+.image-content {
+    flex: 1;
+    display: flex;
+    flex-direction: row; /* 改为水平排列 */
+    flex-wrap: wrap; /* 如果空间不够允许换行 */
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.image-content img {
+    width: 32%; /* 三张图并排，留一点间距 */
+    height: auto;
+    border-radius: 5px;
+    object-fit: contain; /* 保持图片比例 */
+}
+
+.publication-item {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #f8f9fa; /* 可选：添加浅色背景 */
+    border-radius: 8px;
+}
+
+.take-home {
+    margin-top: 15px;
+}
+
+.take-home h4 {
+    margin-bottom: 8px;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.take-home ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.take-home li {
+    margin-bottom: 6px;
+    font-size: 0.85em;
+    line-height: 1.4;
+    position: relative;
+    padding-left: 15px;
+}
+
+/* 调整文章标题和作者的样式 */
+.authors {
+    font-size: 0.9em;
+    margin-bottom: 8px;
+}
+
+.title {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
 
         .what-we-help {
             margin: 60px auto;
