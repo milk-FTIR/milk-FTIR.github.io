@@ -181,12 +181,6 @@
             opacity: 0.8;
             transform: translateY(-1px);
         }
-    .publication-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 30px;
-}
 
         .what-we-help {
             margin: 60px auto;
@@ -205,6 +199,8 @@
             display: flex;
             gap: 30px;
             justify-content: center;
+            flex-direction: column;
+            align-items: center;
         }
 
         .help-item {
@@ -214,6 +210,9 @@
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
             overflow: hidden;
             transition: transform 0.3s ease;
+            width: 95%;
+            max-width: 1200px;
+            margin-bottom: 30px;
         }
 
         .help-item:hover {
@@ -222,14 +221,17 @@
 
         .help-image {
             width: 100%;
-            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             overflow: hidden;
         }
 
         .help-image img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto;
+            object-fit: contain;
+            display: block;
         }
 
         .help-content {
@@ -380,25 +382,30 @@
             font-size: 0.9em;
             opacity: 0.9;
         }
+
+        .help-item.short .help-image {
+            max-height: 220px;
+        }
+
+        .help-item.short .help-content {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Milk FTIR Spectra for Postpartum Diseases Prediction</h1>
-
-        <div class="gif-container">
-    <img src="fig/Presentation.png" alt="Results Analysis">
-</div>
+        <h1>Predicting Early-lactation Diseases in Cows with Milk FTIR</h1>
         
         <div class="gif-container">
             <img src="fig/milk_spectra_mp4.gif" alt="Milk FTIR Spectra Analysis">
         </div>
-
+        
         <div class="overview">
-    <p>This study aims to predict subsequent postpartum diseases in dairy cows using milk spectra collected from daily milking procedures, with a long goal of supporting large-scale health monitoring program in modern dairy farms. We found during early lactation, milk FTIR spectra in high-risk cows initially followed trends similar to healthy cows—rising then slightly declining fat absorbance, decreasing protein, and increasing lactose. As disease progressed, spectral patterns diverged, with higher fat and lower protein and lactose absorbance in diseased cows. Cows with or at risk of metritis may show greater spectral deviation from healthy cows than those with or at risk of mastitis.</p>
+            <p>This study aims to predict subsequent postpartum diseases in dairy cows using milk spectra collected from daily milking procedures, with a long goal of supporting large-scale health monitoring program in modern dairy farms. We found during early lactation, milk FTIR spectra in high-risk cows initially followed trends similar to healthy cows—rising then slightly declining fat absorbance, decreasing protein, and increasing lactose. As disease progressed, spectral patterns diverged, with higher fat and lower protein and lactose absorbance in diseased cows. Cows with or at risk of metritis may show greater spectral deviation from healthy cows than those with or at risk of mastitis.</p>
 
-    <p>These findings highlight the potential of milk FTIR spectra for both early disease prediction and disease-type classification during the transition period. Across two complementary analyses, we applied <span class="highlight">distinct validation frameworks tailored to different clinical use cases</span>: a retrospective setting using repeated down-sampled double cross-validation anchored to diagnosis date, and a prospective setting using repeated leave-one-out cross-validation under varying modeling strategies relative to parturition. Both frameworks incorporated permutation tests and enabled efficient spectral preprocessing and model training. Together, they demonstrate the feasibility of milk FTIR-based prediction of overall health status, metritis, and clinical mastitis on a commercial dairy farm in upstate New York.<p>
-</div>
+            <p>These findings highlight the potential of milk FTIR spectra for both early disease prediction and disease-type classification during the transition period. Across two complementary analyses, we applied <span class="highlight">distinct validation frameworks tailored to different clinical use cases</span>: a retrospective setting using repeated down-sampled double cross-validation anchored to diagnosis date, and a prospective setting using repeated leave-one-out cross-validation under varying modeling strategies relative to parturition. Both frameworks incorporated permutation tests and enabled efficient spectral preprocessing and model training. Together, they demonstrate the feasibility of milk FTIR-based prediction of overall health status, metritis, and clinical mastitis on a commercial dairy farm in upstate New York.<p>
+        </div>
 
         <div class="why-research">
             <h2>Why We Do This Research</h2>
@@ -409,8 +416,8 @@
                         <img src="fig/1.png" alt="Milk FTIR Analysis">
                     </div>
                     <div class="text-side">
-                        <p class="highlight-text">Milk spectra could be a non-invasive, direct and cheap health indicator.</p>
-                        <p>Considering that the alterations in milk composition throughout lactation may mirror the physiological state of dairy cows, as well as the advantages of large-scale milk analysis without additional farm management changes, milk spectroscopy shows potential to assist health monitoring and disease warning in practice.</p>
+                        <p class="highlight-text">Milk FTIR could be a non-invasive, direct and cheap health indicator.</p>
+                        <p>Considering that the alterations in milk composition throughout lactation mirror the physiological state of dairy cows, as well as the advantages of large-scale milk analysis without additional farm management changes, milk FTIR spectroscopy shows potential to assist health monitoring and disease warning in practice.</p>
                     </div>
                 </div>
             </div>
@@ -421,8 +428,8 @@
                         <img src="fig/2.png" alt="Machine Learning Analysis">
                     </div>
                     <div class="text-side">
-                        <p class="highlight-text">Daily spectra + Machine Learning = Real-time and Precise Health Condition Prediction!</p>
-                        <p>Our projects combine daily milk spectra for each dairy cow with machine learning models to support a real-time and precise prediction. Under this overarching goal, we are conducting a series of research that further validates the feasibility of spectra and technology, generates benchmark dataset, and proposes computing systems.</p>
+                        <p class="highlight-text">Daily FTIR + Machine Learning = Real-time and Precise Health Condition Prediction!</p>
+                        <p>Our projects combine daily milk FTIR spectra for each dairy cow with ensembles machine learning models to support a real-time and precise prediction. Under this overarching goal, we are conducting a series of research that further validates the feasibility of spectra and technology, generates benchmark dataset, and proposes computing systems.</p>
                     </div>
                 </div>
             </div>
@@ -459,8 +466,8 @@
             
             <div class="help-container">
                 <!-- Pre-Processing Section -->
-                <div class="help-item">
-                    <div class="help-image">
+                <div class="help-item short">
+                    <div class="help-image short">
                         <img src="fig/3.png" alt="Pre-Processing Visualization">
                     </div>
                     <div class="help-content">
@@ -470,8 +477,8 @@
                 </div>
 
                 <!-- Machine Learning Section -->
-                <div class="help-item">
-                    <div class="help-image">
+                <div class="help-item short">
+                    <div class="help-image short">
                         <img src="fig/4.png" alt="Machine Learning Visualization">
                     </div>
                     <div class="help-content">
@@ -487,7 +494,7 @@
                     </div>
                     <div class="help-content">
                         <h3>Machine Learning + Repeated double cross-validation + Permutation test</h3>
-                        <a href="#" class="tutorial-button">Tutorial</a>
+                        <a href="https://github.com/lindan1128/Milk-FTIR-Spectra-Health-Prediction-Project" class="tutorial-button">Tutorial</a>
                     </div>
                 </div>
 
@@ -498,40 +505,11 @@
                     </div>
                     <div class="help-content">
                         <h3>PLS-DA + Repeated LOOCV + Permutation test</h3>
-                        <a href="#" class="tutorial-button">Tutorial</a>
+                        <a href="https://github.com/lindan1128/Milk-FTIR-Spectra-Metritis-Mastitis-Project" class="tutorial-button">Tutorial</a>
                     </div>
                 </div>
             </div>
         </div>
-
-
-<!--         <div class="what-we-help">
-            <h2>What We Can Help</h2>
-            
-            <div class="help-container">
-                <!-- Pre-Processing Section -->
-                <div class="help-item">
-                    <div class="help-image">
-                        <img src="fig/3.png" alt="Pre-Processing Visualization">
-                    </div>
-                    <div class="help-content">
-                        <h3>Pre-Processing</h3>
-                        <a href="tutorial/batch_preprocessing.html" class="tutorial-button">Tutorial</a>
-                    </div>
-                </div>
-
-                <!-- Machine Learning Section -->
-                <div class="help-item">
-                    <div class="help-image">
-                        <img src="fig/4.png" alt="Machine Learning Visualization">
-                    </div>
-                    <div class="help-content">
-                        <h3>Machine Learning</h3>
-                        <a href="tutorial/ensemble_ml.html" class="tutorial-button">Tutorial</a>
-                    </div>
-                </div>
-            </div>
-        </div> -->
 
         <div class="research-team">
             <h2>Research Team</h2>
@@ -586,12 +564,8 @@
         </div>
 
         <footer class="copyright">
-            <p>Copyright © 2025 McArt Dairy Cow Lab. All Rights Reserved.</p>
+            <p>Copyright © 2024 McArt Dairy Cow Lab. All Rights Reserved.</p>
         </footer>
     </div>
 </body>
 </html>
-
-
-
-
